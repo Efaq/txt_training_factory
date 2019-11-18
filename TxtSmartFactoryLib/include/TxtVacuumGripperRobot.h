@@ -299,6 +299,7 @@ public:
 
 	void moveDeliveryInAndGrip();
 	void moveDeliveryOutAndRelease();
+	void moveDeliveryOutAndReleaseLoop();
 	void moveColorSensor(bool half = false);
 	void moveRefYNFC();
 	void moveNFC();

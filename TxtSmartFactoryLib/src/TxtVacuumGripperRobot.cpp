@@ -285,6 +285,16 @@ void TxtVacuumGripperRobot::moveDeliveryOutAndRelease()
 	moveRef();
 }
 
+void TxtVacuumGripperRobot::moveDeliveryOutAndReleaseLoop()
+{
+	SPDLOG_LOGGER_TRACE(spdlog::get("console"), "moveDeliveryOutAndReleaseLoop", 0);
+	axisY.moveRef();
+	move("DIN0", ft::VGRMOV_PTP);
+	move("DIN", ft::VGRMOV_PTP);
+	vgripper.release();
+	moveRef();
+}
+
 void TxtVacuumGripperRobot::moveColorSensor(bool half)
 {
 	SPDLOG_LOGGER_TRACE(spdlog::get("console"), "moveColorSensor", 0);

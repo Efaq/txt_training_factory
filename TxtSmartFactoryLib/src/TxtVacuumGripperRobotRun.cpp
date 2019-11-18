@@ -491,7 +491,8 @@ void TxtVacuumGripperRobot::fsmStep()
 		{
 			dps.setErrorDSO(false);
 
-			moveDeliveryOutAndRelease();
+			//moveDeliveryOutAndRelease();
+			moveDeliveryOutAndReleaseLoop();
 
 			ord_state.type = reqWP_order.type;
 			ord_state.state = SHIPPED;
